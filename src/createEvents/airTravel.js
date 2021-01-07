@@ -7,7 +7,7 @@ const AirTravel = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-3"></div>
+                {/* <div className="col-md-3"></div> */}
                 <div className="col-md-6">
                     <section>
                         <div className="font24 bold mt5">Basic Info</div>

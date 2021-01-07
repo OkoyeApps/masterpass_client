@@ -11,7 +11,7 @@
 
 @media(min-width:1677px){
     .res_wrapper{
-        max-width: 1233px;
+        /* max-width: 1233px; */
         margin: 0 auto;
     }
 }

@@ -99,11 +99,12 @@
     color: #000000;
 }
 .ticket_btn_section{
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;
-    border-top: 1px dashed #999999;
+    left: 0; */
+    width: 100%;
+    border-top: 2px dashed #999999;
 }
 .ticket_card_type{
     background: #1D2155;

@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { modalControl } from '../assets/main'
-import imageIcon from '../assets/image/df.png'
-import DropifyComp from '../components/dropifyComponent';
-import DatePicker from '../components/datePickerComp';
+import React from 'react'
 import image from '../assets/image/confrencePix.png';
 import './events.css'
 
@@ -15,7 +11,7 @@ let dropDownIcon = <svg width="1em" height="1em" viewBox="0 0 16 16" className="
 
 
 const Confrence = (props) => {
-  let dummyData = [1, 2, 3, 4]
+  let dummyData = Array.from({length : 4})
   return (
     <>
       <div className="row">
@@ -31,7 +27,7 @@ const Confrence = (props) => {
       <div className="row mb-5">
         <div className="col-md-7 text-center mx-auto">
           <p className="confrence_top_writeup  mb-4">
-            Lets help you promote your event. Start by adding your event to our datatbase
+            Lets help you promote your event. Start by <br /> adding your event to our datatbase
           </p>
           <button type="button" className="btn events_add_event_btn" onClick={()=>{props.history.push("/confrence/add/events#1")}}>Add Events</button>
         </div>
@@ -52,7 +48,7 @@ const Confrence = (props) => {
         <div className="row">
           {
             dummyData.map(() => (
-              <div className="col-md-3 mb-5">
+              <div className="col-md-3 mb-5 cursor-pointer">
                 <div className="card border-0 p-0">
                   <img src={image} className="card-img-top" alt="..." />
                   <div className="card-body bg_confrence_card d-flex">
@@ -92,7 +88,7 @@ const Confrence = (props) => {
         <div className="row">
           {
             dummyData.map(() => (
-              <div className="col-md-3 mb-5">
+              <div className="col-md-3 mb-5 cursor-pointer">
                 <div className="card border-0 p-0">
                   <img src={image} className="card-img-top" alt="..." />
                   <div className="card-body bg_confrence_card d-flex">

@@ -6,8 +6,8 @@ import './events.css';
 
 
 const SelectedConfrence = () => {
-    let dummyData = [1, 2, 3, 4]
-    let dummyTicketData = [1, 2, 3]
+    let dummyData = Array.from({ length: 4 });
+    let dummyTicketData = Array.from({ length: 4 });
     return (
         <>
             <div className="row">
@@ -19,7 +19,7 @@ const SelectedConfrence = () => {
                                 <div>
                                     <span>Business Conference</span>
                                     <h2 className="mb-5">
-                                        How to make profit in 5 days
+                                        How to make <br /> profit in 5 days
                                     </h2>
                                     <button type="button" className="btn events_add_event_btn">Get Tickets</button>
                                 </div>
@@ -28,12 +28,14 @@ const SelectedConfrence = () => {
                     </div>
                 </div>
             </div>
+            <br />
             <section className="layout_side_spacing py-5">
+
                 <div className="row">
                     <div className="col-md-6">
                         <h1 className="events_h1_writeup">
-                            We connect founders
-                            from around the globe
+                            We connect founders <br />
+                            from around the globe <br />
                             to share the latest
                         </h1>
                     </div>
@@ -43,7 +45,7 @@ const SelectedConfrence = () => {
                 <div className="row">
                     {
                         dummyData.map(() => (
-                            <div className="col-md-3 px-4">
+                            <div className="col-md-3 px-4 cursor-pointer my-1">
                                 <div className="card border-0 p-0">
                                     <img src={image} className="card-img-top" alt="..." />
                                     <div className="card-body text-center">
@@ -153,14 +155,17 @@ const SelectedConfrence = () => {
                         <h4 className="section_header">Tickets</h4>
                     </div>
                 </div>
-                <div className="row">
-                    {
-                        dummyTicketData.map((x) => (
-                            <div className="col-md-4 px-5">
-                                <div className="card border-0 p-0 round-0 ticket_card">
+                <div className="row ">
+                    <div className="col-md-1"></div>
+                    <div className="col-md-10">
+                        <div class="row">
+                        {
+                        dummyTicketData.map((_, x) => (
+                            <div className="col-md-3 px-5 mb-2">
+                                <div className="card border-0 p-0 round-0 ticket_card mx-2">
                                     <div className="ticket_card_type text-center py-4">
                                         <span>Regular</span>
-                                        <div>N 1500</div>
+                                        <div>N 1500 {x}</div>
                                     </div>
                                     <div className="ticket_card_list_section p-4">
                                         <ul className="p-0 m-0 ticket_card_list" style={{ listStyleType: "none" }}>
@@ -172,23 +177,27 @@ const SelectedConfrence = () => {
                                             <li className="mb-2"> <i class="fas fa-circle mr-2"></i> Lunch</li>
                                         </ul>
                                     </div>
-                                    <div className="ticket_btn_section text-center py-4">
+                                    <div className="ticket_btn_section text-center py-4 my-2" >
                                         {
-                                            x===1?
-                                            <button type="button" className="btn events_add_event_btn">Buy Ticket</button>
-                                            :
-                                            <button type="button" disabled className="btn events_add_event_btn">Sold Out</button>
+                                            x === 1 ?
+                                                <button type="button" className="btn events_add_event_btn">Buy Ticket</button>
+                                                :
+                                                <button type="button" disabled className="btn events_add_event_btn">Sold Out</button>
                                         }
                                     </div>
                                 </div>
                             </div>
                         ))
                     }
+                <p className="note_ mt-5 px-5 mx-2">Note: Already bought tickets can be resold <span className="linked_">Here</span></p>
+                        </div>
+                    </div>
+                   
+                    <div className="col-md-1"></div>
                 </div>
-                <p className="note_ mt-5">Note: Already bought tickets can be resold <span className="linked_">Here</span></p>
             </section>
         </>
-    )
-}
+    );
+};
 
-export default SelectedConfrence
+export default SelectedConfrence;
