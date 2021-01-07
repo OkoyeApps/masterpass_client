@@ -1,0 +1,17 @@
+.layout_side_spacing{
+    padding: 0 100px;
+}
+.header_{
+    background: #C4C4C4;
+}
+
+.flex_wrap{
+    flex-wrap: wrap;
+}
+
+@media(min-width:1677px){
+    .res_wrapper{
+        /* max-width: 1233px; */
+        margin: 0 auto;
+    }
+}

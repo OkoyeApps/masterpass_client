@@ -1,0 +1,44 @@
+.events_add_event_btn{
+    background: #1D2155;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 183px;
+    height: 57px;
+}
+.events_add_event_btn:hover{
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+.events_p_writeup{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+.events_col_pix{
+    object-fit: cover;
+}
+.events_col_writeup{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #212121;
+    margin: 30px;
+}
+.events_h1_writeup{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    color: #252525;
+}
+.linked_{
+    text-decoration: underline;
+    color: #1D2155;
+    font-weight: bold;
+}
